@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="searchParts.css">
+</head>
+<body>
+    <div class="main">
+        <!-- <input id="make" placeholder="մակնիշ"><br> -->
+        <select id="make">
+            <option value="nissan">nissan</option>
+            <option value="infiniti">infiniti</option>
+            <option value="chevrilet">chevrilet</option>
+          </select><br>
+        <input id="model" placeholder="մոդել"><br>
+        <input id="partName" placeholder="պահեստամասի անվան"><br>
+        <input id="position" placeholder="դիրք"><br>
+        <input id="color" placeholder="գույն"><br>
+        <select id="isOriginal">
+            <option value="0">բոլորը</option>
+            <option value="1">օրիգինալ</option>
+            <option value="2">փոխարինող</option>
+          </select><br>
+        <input id="location"  placeholder="գտնվելու վայր"><br>
+        <textarea id="noth" placeholder="նշումներ" ></textarea><br>
+        <input id="count" type="number"  placeholder="քանակ"><br>
+        <input id="price" type="number"  placeholder="գին"><br>
+        <button onclick="searchParts()"> փնտրել</button>
+    </div>
+</body>
+<script src="./searchParts.js"> </script>
+
+<a href="../addParts/addParts.html">add parts</a>
+</html>
