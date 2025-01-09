@@ -48,6 +48,10 @@ function createTable(data) {
     // Add the table to the container
     container.innerHTML = '';
     container.appendChild(table);
+    container.style.position = 'relative';
+container.style.zIndex = '1';
+// container.style.color = '#ffffff'; // Ensure text color contrasts with the background
+// container.style.padding = '20px';
 }
 
 
@@ -70,7 +74,6 @@ function searchParts() {
           const tableBody = document.querySelector("#carPartsTable tbody");
 
           // Populate the table
-      console.log("gmpppp");
 
           data.forEach(item => {
             const row = document.createElement("tr");

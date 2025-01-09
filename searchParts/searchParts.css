@@ -5,7 +5,9 @@
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 900;
   }
 
   .header {
@@ -14,4 +16,20 @@ table, th, td {
     background-color: rgb(87, 124, 234);
     box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
   }
-  
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/background._cut-photo.ru.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.2;
+        /* filter: blur(0.1px); */
+         /* Adjust the blur intensity as needed */
+        z-index: -2;
+      }
