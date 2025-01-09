@@ -49,6 +49,7 @@ function req(data) {
              document.getElementById("noth").value=null  
              document.getElementById("count").value=null  
              document.getElementById("price").value=null
+             alert("պահեստամասը հաստատված է")
         })
         .catch((error) => {
           console.error("Error ", error);
