@@ -1,3 +1,57 @@
+
+function createTable(data) {
+    const container = document.getElementById('table-container');
+
+    const table = document.createElement('table');
+    
+    // Create table header
+    const thead = document.createElement('thead');
+    thead.innerHTML = `
+        <tr>
+            <th>մակնիշ</th>
+            <th>մոդել</th>
+            <th>պահեստամասի անվան</th>
+            <th>դիրք</th>
+            <th>գույն</th>
+            <th>օրիգինալություն</th>
+            <th>գտնվելու վայր</th>
+            <th>նշումներ</th>
+            <th>քանակ</th>
+            <th>գին</th>
+        </tr>
+    `;
+    table.appendChild(thead);
+
+    // Create table body
+    const tbody = document.createElement('tbody');
+
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.make}</td>
+            <td>${item.model}</td>
+            <td>${item.partName}</td>
+            <td>${item.position}</td>
+            <td>${item.color}</td>
+            <td>${item.isOriginal ? 'Այո' : 'Ոչ'}</td>
+            <td>${item.location}</td>
+            <td>${item.noth}</td>
+            <td>${item.count}</td>
+            <td>${item.price}</td>
+            <td><p>${item._id}</p></td>
+        `;
+        tbody.appendChild(row);
+    });
+
+    table.appendChild(tbody);
+
+    // Add the table to the container
+    container.innerHTML = '';
+    container.appendChild(table);
+}
+
+
+
 function searchParts() {
    
     let data = generateData()
@@ -8,6 +62,49 @@ function searchParts() {
     
     }
 
+
+    function seeresult(data) {
+        data=data.result
+        console.log(typeof data);
+        
+          const tableBody = document.querySelector("#carPartsTable tbody");
+
+          // Populate the table
+      console.log("gmpppp");
+
+          data.forEach(item => {
+            const row = document.createElement("tr");
+
+      
+            // Define the columns you want to show in the table
+            const columns = [
+              item.make || '',
+              item.model || '',
+              item.partName || '',
+              item.position || '',
+              item.color || '',
+              item.original || '',
+              item.location || '',
+              item.notes || '',
+              item.count || '',
+              item.price || ''
+            ];
+      
+            // Create table cells
+            columns.forEach(columnData => {
+              const cell = document.createElement("td");
+              cell.textContent = columnData;
+              row.appendChild(cell);
+            });
+      
+            // Append the row to the table body
+            tableBody.appendChild(row);
+          });
+
+          
+      
+    }
+    // 
     
     function req(data) {
         fetch("https://carparts-t0mi.onrender.com/api/searchCarPart", {
@@ -25,6 +122,11 @@ function searchParts() {
             })
             .then((data) => {
 console.log(data);
+createTable(data.result);
+
+// seeresult(data)
+// createTable(data);
+
 
                 //  document.getElementById("model").value=null
                 //  document.getElementById("partName").value=null
