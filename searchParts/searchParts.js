@@ -94,7 +94,7 @@ let  updateDiv = document.getElementById('table-container');
 console.log(data);
 
 updateDiv.innerHTML=`
-    <div id="updateDiv" style=" background-color: red; margin-left: 30%;"> 
+    <div id="updateDiv" style="  margin-left: 30%;"> 
      
   <input id="updatemake" placeholder="մակնիշ" value="${data.make}"><br>
     <input id="updatemodel" placeholder="մոդել" value="${data.model}"><br>
