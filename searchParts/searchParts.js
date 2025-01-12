@@ -1,3 +1,36 @@
+function addModel() {
+    const make = document.getElementById('make').value;
+    let options = [];
+if (make=="infiniti") {
+     options = [
+        { value: 'fx35 s50', text: 'fx35 s50' },
+        { value: 'fx35 s51', text: 'fx35 s51' },
+        { value: 'q50', text: 'q50' },
+        { value: 'xtrile', text: 'xtrile' },
+];
+}else if (make=="chevrolet") {
+    options = [
+        { value: 'volt 1', text: 'volt 1' },
+        { value: 'volt 2', text: 'volt 2' },
+];
+}else if (make=="nissan") {
+    options = [
+        { value: 'sentra', text: 'sentra' },
+        { value: 'skyline', text: 'skyline' },
+        { value: 'rogue', text: 'rogue' },
+        { value: 'altima', text: 'altima' },
+
+];
+}
+    const selectElement = document.getElementById('model');
+    selectElement.innerHTML = '';
+    options.forEach(optionData => {
+        const option = document.createElement('option'); // Create <option> element
+        option.value = optionData.value;                // Set the value attribute
+        option.textContent = optionData.text;           // Set the text content
+        selectElement.appendChild(option);              // Append the option to the <select>
+    });
+}
 function reportNone() {
     const button = document.getElementById('buttonid');
 
