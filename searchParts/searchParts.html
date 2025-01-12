@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="searchParts.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="all" >
   <h1>Search Parts</h1>
@@ -18,7 +18,7 @@
 
     <div class="main">
         <!-- <input id="make" placeholder="մակնիշ"><br> -->
-        <select id="make">
+        <select id="make" >
             <option value="nissan">nissan</option>
             <option value="infiniti">infiniti</option>
             <option value="chevrilet">chevrilet</option>
@@ -33,7 +33,7 @@
             <option value="2">փոխարինող</option>
           </select><br>
         <input id="location"  placeholder="գտնվելու վայր"><br>
-        <textarea id="noth" placeholder="նշումներ" ></textarea><br>
+        <textarea id="noth" placeholder="նշումներ"  ></textarea><br>
         <input id="count" type="number"  placeholder="քանակ"><br>
         <input id="price" type="number"  placeholder="գին"><br>
         <button style="border-radius: 20px; width: 120px; height: 50px; background-color: rgb(3, 158, 255);" onclick="searchParts()"> փնտրել</button>
@@ -43,8 +43,9 @@
 
     <!-- <div class="result"> -->
         <div id="table-container"></div>
-
     <!-- </div> -->
+
+
 </body>
 <script src="./searchParts.js"> </script>
 
