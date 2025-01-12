@@ -1,3 +1,8 @@
+function reportNone() {
+    const button = document.getElementById('buttonid');
+
+    button.style.display = 'none';
+}
 function deletePartById(id) {
     console.log("deletePartById(id)",id);
     
