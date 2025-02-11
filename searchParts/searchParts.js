@@ -125,27 +125,72 @@ function getPartById(id) {
             
 let  updateDiv = document.getElementById('table-container');
 console.log(data);
+updateDiv.innerHTML = `
+    <div id="updateDiv" style="
+        max-width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 30px auto;
+        font-family: Arial, sans-serif;
+    "> 
+        ${generateInput("Մակնիշ", "updatemake", data.make)}
+        ${generateInput("Մոդել", "updatemodel", data.model)}
+        ${generateInput("Պահեստամասի անվանում", "updatepartName", data.partName)}
+        ${generateInput("Դիրք", "updateposition", data.position)}
+        ${generateInput("Գույն", "updatecolor", data.color)}
+        ${generateCheckbox("Օրիգինալություն", "updateisOriginal", data.isOriginal)}
+        ${generateInput("Գտնվելու վայր", "updatelocation", data.location)}
+        ${generateTextarea("Նշումներ", "updatenoth", data.noth)}
+        ${generateInput("Քանակ", "updatecount", data.count, "number")}
+        ${generateInput("Գին", "updateprice", data.price, "number")}
 
-updateDiv.innerHTML=`
-    <div id="updateDiv" style="  margin-left: 30%;"> 
-     
-  <input id="updatemake" placeholder="մակնիշ" value="${data.make}"><br>
-    <input id="updatemodel" placeholder="մոդել" value="${data.model}"><br>
-    <input id="updatepartName" placeholder="պահեստամասի անվան" value="${data.partName}"><br>
-    <input id="updateposition" placeholder="դիրք" value="${data.position}"><br>
-    <input id="updatecolor" placeholder="գույն" value="${data.color}"><br>
-
-        <div style="display: flex;">
-        <p>օրիգինալություն</p> <input type="checkbox" ${data.isOriginal ? "checked" : ""}  id="updateisOriginal"><br>
-        </div>
-    <input id="updatelocation"  placeholder="գտնվելու վայր" value="${data.location}"><br>
-    <textarea id="updatenoth" placeholder="նշումներ"  >${data.noth}</textarea><br>
-    <input id="updatecount" type="number"  placeholder="քանակ"value="${data.count}"><br>
-    <input id="updateprice" type="number"  placeholder="գին" value="${data.price}"><br>
-    <button style="border-radius: 20px; width: 120px; height: 50px; background-color: rgb(3, 158, 255);" onclick="reqUpdatePart('${data._id}')"> Թարմացնել</button>
-
+        <button style="
+            display: block;
+            width: 100%;
+            background-color: #039eff;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        " onclick="reqUpdatePart('${data._id}')">Թարմացնել</button>
     </div>
-    `
+`;
+
+function generateInput(label, id, value, type = "text") {
+    return `
+        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <h4 style="min-width: 130px; margin: 0; font-size: 14px; color: #333;">${label}</h4>
+            <input id="${id}" type="${type}" placeholder="${label}" value="${value}" 
+                style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; outline: none;">
+        </div>
+    `;
+}
+
+function generateTextarea(label, id, value) {
+    return `
+        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <h4 style="min-width: 130px; margin: 0; font-size: 14px; color: #333;">${label}</h4>
+            <textarea id="${id}" placeholder="${label}" 
+                style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; outline: none; height: 60px; resize: none;">${value}</textarea>
+        </div>
+    `;
+}
+
+function generateCheckbox(label, id, checked) {
+    return `
+        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <h4 style="min-width: 130px; margin: 0; font-size: 14px; color: #333;">${label}</h4>
+            <input type="checkbox" id="${id}" ${checked ? "checked" : ""} 
+                style="width: 18px; height: 18px; margin-left: 10px;">
+        </div>
+    `;
+}
+
 
         })
         .catch((error) => {
