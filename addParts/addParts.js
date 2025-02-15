@@ -59,6 +59,7 @@ function validationData(data) {
 }
 
 function req(data) {
+document.getElementById("price").value=null
     fetch("https://carparts-t0mi.onrender.com/api/carPart", {
         method: "POST",
         headers: {
