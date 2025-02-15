@@ -20,7 +20,6 @@ if (make=="infiniti") {
       { value: 'altima', text: 'altima' },
       { value: 'xtrile', text: 'xtrile' },
 
-
 ];
 }
   const selectElement = document.getElementById('model');
