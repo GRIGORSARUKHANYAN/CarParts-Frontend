@@ -5,6 +5,7 @@ if (make=="infiniti") {
      options = [
         { value: 'fx35 s50', text: 'fx35 s50' },
         { value: 'fx35 s51', text: 'fx35 s51' },
+      { value: 'fx45', text: 'fx45' },
         { value: 'q50', text: 'q50' },
         { value: 'xtrail', text: 'xtrail' },
 ];
