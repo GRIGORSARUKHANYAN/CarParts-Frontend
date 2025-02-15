@@ -6,7 +6,7 @@ if (make=="infiniti") {
         { value: 'fx35 s50', text: 'fx35 s50' },
         { value: 'fx35 s51', text: 'fx35 s51' },
         { value: 'q50', text: 'q50' },
-        { value: 'xtrile', text: 'xtrile' },
+        { value: 'xtrail', text: 'xtrail' },
 ];
 }else if (make=="chevrolet") {
     options = [

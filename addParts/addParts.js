@@ -18,7 +18,7 @@ if (make=="infiniti") {
       { value: 'skyline', text: 'skyline' },
       { value: 'rogue', text: 'rogue' },
       { value: 'altima', text: 'altima' },
-      { value: 'xtrile', text: 'xtrile' },
+      { value: 'xtrail', text: 'xtrail' },
 
 ];
 }
