@@ -77,7 +77,7 @@ function req(data) {
              document.getElementById("position").value=null  
              document.getElementById("color").value=null
              document.getElementById("isOriginal").checked=true
-             document.getElementById("location").value=null  
+            //  document.getElementById("location").value=null  
              document.getElementById("noth").value=null  
              document.getElementById("count").value=null  
              document.getElementById("price").value=null
