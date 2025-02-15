@@ -77,7 +77,7 @@ function req(data) {
              document.getElementById("partName").value=null
              document.getElementById("position").value=null  
              document.getElementById("color").value=null
-             document.getElementById("isOriginal").checked=false
+             document.getElementById("isOriginal").checked=true
              document.getElementById("location").value=null  
              document.getElementById("noth").value=null  
              document.getElementById("count").value=null  
