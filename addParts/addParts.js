@@ -73,7 +73,6 @@ function req(data) {
           return response.json();
         })
         .then((data) => {
-             document.getElementById("model").value=null
              document.getElementById("partName").value=null
              document.getElementById("position").value=null  
              document.getElementById("color").value=null
