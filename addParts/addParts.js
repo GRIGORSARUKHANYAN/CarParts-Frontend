@@ -52,7 +52,7 @@ if (validationData(data)) {
 }
 }
 function validationData(data) {
-    if (!data.make || !data.model || !data.partName   || !data.location || !data.count || !data.price) {
+    if (!data.make || !data.model || !data.partName    || !data.count || !data.price) {
          alert("լրացրեք բոլոր դաշտերը")
          return false
     }
