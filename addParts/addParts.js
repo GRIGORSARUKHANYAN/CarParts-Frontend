@@ -24,7 +24,7 @@ if (make=="infiniti") {
 ];
 }else if(make=="volkswagen"){
   options = [
-    { value: 'sentra', text: 'passat' },
+    { value: 'passat', text: 'passat' },
 ];
 }
   const selectElement = document.getElementById('model');
