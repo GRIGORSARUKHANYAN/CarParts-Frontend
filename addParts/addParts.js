@@ -22,6 +22,10 @@ if (make=="infiniti") {
       { value: 'xtrail', text: 'xtrail' },
 
 ];
+}else if(make=="volkswagen"){
+  options = [
+    { value: 'sentra', text: 'passat' },
+];
 }
   const selectElement = document.getElementById('model');
   selectElement.innerHTML = '';

@@ -21,6 +21,10 @@ if (make=="infiniti") {
         { value: 'altima', text: 'altima' },
 
 ];
+}else if(make=="volkswagen"){
+  options = [
+    { value: 'sentra', text: 'passat' },
+];
 }
     const selectElement = document.getElementById('model');
     selectElement.innerHTML = '';
